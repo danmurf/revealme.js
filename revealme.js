@@ -36,8 +36,10 @@ function createClickableEmailLink(link) {
   event.preventDefault();
 }
 
+/**
+ * Obfuscate all email address instances
+ */
 var revealme = document.getElementsByClassName("revealme");
-
 for (i = 0; i < revealme.length; i++) {
 
   //Create a link and store the email address
