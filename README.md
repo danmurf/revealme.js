@@ -1,2 +1,2 @@
-# RevealMe
+# revealme.js
 Lightweight JavaScript email address obfuscation
