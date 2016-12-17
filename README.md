@@ -8,7 +8,7 @@
 <script type="text/javascript" src="revealme.js"></script>
 ```
 
-2) Add email addresses to you HTML in a phoenitic form, and encapsulate them in the revealme class.
+2) Add email addresses to you HTML in a phonetic form, and encapsulate them in the revealme class.
 
 ```html
 <p>My email address <span class="revealme">jessie dot wongus at example hyphen domain dot com</span></p>
