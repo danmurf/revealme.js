@@ -1,3 +1,5 @@
+window.onload = revealMe;
+
 /**
  * Convert written out email address to properly formatted address
  * @method getEmail
@@ -50,10 +52,14 @@ function createClickableEmailLink(link) {
 
 /**
  * Convert all written out email addresses to clickable, obfuscated email addresses
+ * @method revealMe
+ * @return void
  */
-var revealme = document.getElementsByClassName("revealme");
-for (i = 0; i < revealme.length; i++) {
+function revealMe() {
+    var revealme = document.getElementsByClassName("revealme");
+    for (i = 0; i < revealme.length; i++) {
 
-  //Create a link and store the email address
-  revealme[i].innerHTML = '<a href="#" data-revealme="'+revealme[i].innerText+'" onclick="createClickableEmailLink(this)">'+obfuscateEmail(getEmail(revealme[i].innerText))+' (click to reveal)</a>';
+      //Create a link and store the email address
+      revealme[i].innerHTML = '<a href="#" data-revealme="'+revealme[i].innerText+'" onclick="createClickableEmailLink(this)">'+obfuscateEmail(getEmail(revealme[i].innerText))+' (click to reveal)</a>';
+    }
 }
