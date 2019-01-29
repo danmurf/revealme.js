@@ -62,6 +62,6 @@ window.revealMe = function() {
     var revealme = document.getElementsByClassName("revealme");
     for (i = 0; i < revealme.length; i++) {
       //Create a link and store the email address
-      revealme[i].innerHTML = '<a href="#" data-revealme="'+revealme[i].innerText+'" onclick="window.createClickableEmailLink(this)">'+obfuscateEmail(getEmail(revealme[i].innerText))+' (click to reveal)</a>';
+      revealme[i].innerHTML = '<a href="#" data-revealme="'+revealme[i].innerText+'" onclick="window.createClickableEmailLink(this)">'+window.obfuscateEmail(window.getEmail(revealme[i].innerText))+' (click to reveal)</a>';
     }
 }
