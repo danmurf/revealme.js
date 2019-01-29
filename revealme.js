@@ -1,12 +1,13 @@
-window.onload = revealMe;
+window.onload = window.revealMe;
 
 /**
  * Convert written out email address to properly formatted address
- * @method getEmail
+ * 
  * @param  string text Written out email address ("user at example hyphen domain dot com")
+ * 
  * @return string      Properly formatted email address ("user@example-domain.com")
  */
-function getEmail(text) {
+window.getEmail = function(text) {
 
   return text.replace(/ at /g, "@")
              .replace(/ dot /g, ".")
@@ -15,11 +16,12 @@ function getEmail(text) {
 
 /**
  * Obfuscate the middle portion of an email address
- * @method obfuscateEmail
+ * 
  * @param  string       email Properly formatted email address
+ * 
  * @return string             Obfuscated email address
  */
-function obfuscateEmail(email) {
+window.obfuscateEmail = function(email) {
 
   //Calculate the obfuscation points
   var numLettersToObfuscate = Math.floor(email.length / 2);
@@ -33,14 +35,15 @@ function obfuscateEmail(email) {
 
 /**
  * Convert the obfuscated email address to a properly formatted email link
- * @method createClickableEmailLink
+ * 
  * @param  object       link Instance of the link to convert
+ * 
  * @return void
  */
-function createClickableEmailLink(link) {
+window.createClickableEmailLink = function(link) {
 
   //Convert the contents to the proper email address
-  link.innerText = getEmail(link.getAttribute('data-revealme'));
+  link.innerText = window.getEmail(link.getAttribute('data-revealme'));
 
   //Add the email address href
   link.setAttribute('href', "mailto:"+getEmail(link.getAttribute('data-revealme')));
@@ -52,14 +55,13 @@ function createClickableEmailLink(link) {
 
 /**
  * Convert all written out email addresses to clickable, obfuscated email addresses
- * @method revealMe
+ * 
  * @return void
  */
-function revealMe() {
+window.revealMe = function() {
     var revealme = document.getElementsByClassName("revealme");
     for (i = 0; i < revealme.length; i++) {
-
       //Create a link and store the email address
-      revealme[i].innerHTML = '<a href="#" data-revealme="'+revealme[i].innerText+'" onclick="createClickableEmailLink(this)">'+obfuscateEmail(getEmail(revealme[i].innerText))+' (click to reveal)</a>';
+      revealme[i].innerHTML = '<a href="#" data-revealme="'+revealme[i].innerText+'" onclick="window.createClickableEmailLink(this)">'+obfuscateEmail(getEmail(revealme[i].innerText))+' (click to reveal)</a>';
     }
 }
