@@ -10,8 +10,8 @@
   "author": "Dan Murfitt <dan@murfitt.net>",
   "license": "MIT",
   "devDependencies": {
-    "node-qunit-phantomjs": "^1.5.0",
-    "qunit": "^0.9.1"
+    "node-qunit-phantomjs": "^2.0.1",
+    "qunit": "^2.9.2"
   },
   "scripts": {
     "test": "node-qunit-phantomjs tests.html"
