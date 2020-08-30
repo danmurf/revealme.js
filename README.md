@@ -2,7 +2,6 @@
 *Lightweight JavaScript email address obfuscation*
 
 [![Build Status](https://travis-ci.org/danmurf/revealme.js.svg?branch=master)](https://travis-ci.org/danmurf/revealme.js)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=danmurf/revealme.js)](https://dependabot.com)
 - - -
 Use revealme.js in your web page so you can include a link to your email address without having to actually write it out. If you're worried about getting spam because you'd like to put your email address on a publicly accessible page, this script is for you.
 
